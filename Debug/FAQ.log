@@ -1,5 +1,5 @@
-﻿  stdafx.cpp
-  FAQ.cpp
-d:\documents\github\eigen\eigen\src\core\arch\cuda\half.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-d:\documents\github\machinelearning\newralnetwork\newralnetwork\activatefunction.h(102): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-LINK : fatal error LNK1104: ファイル 'NewralNetWork.lib' を開くことができません。
+﻿  FAQ.cpp
+c:\users\init\documents\github\eigen\eigen\src\core\arch\cuda\half.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+c:\users\init\documents\github\machinelearning\newralnetwork\newralnetwork\activatefunction.h(102): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+  FAQ.vcxproj -> C:\Users\init\Documents\Visual Studio 2017\Projects\sandbox\Debug\FAQ.exe
+  FAQ.vcxproj -> C:\Users\init\Documents\Visual Studio 2017\Projects\sandbox\Debug\FAQ.pdb (Full PDB)

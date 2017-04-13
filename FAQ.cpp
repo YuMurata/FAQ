@@ -44,15 +44,15 @@ int main()
 
 		if (s == 3)
 		{
-			ret = -10.;
+			ret = -1.;
 		}
 		else if (s == 7)
 		{
-			ret = 10.;
+			ret = 1.;
 		}
 		else
 		{
-			ret = -1.;
+			ret = 0.;
 		}
 
 		return ret;
@@ -97,12 +97,27 @@ int main()
 	{
 	};
 
-	FAQ::SAToInput sa_to_input = [](const S &s, const A &a)
+		auto s_num = 11;
+		auto a_num = 4;
+		auto data_num = s_num + a_num;
+	FAQ::SAToInput sa_to_input = [&](const S &s, const A &a)
 	{
 		using namespace Eigen;
 
-		vector<double> data{ 1.*s,1.*a };
-		MLP::Input ret = Map<MLP::Input>(data.data(), 2);
+
+		vector<double> data_s(s_num,0.);
+		data_s[s] = 1;
+
+		vector<double> data_a(a_num, 0.);
+		data_a[a] = 1;
+
+		vector<double> data;
+		data.reserve(data_num);
+
+		data.insert(end(data), begin(data_s),end(data_s));
+		data.insert(end(data), begin(data_a), end(data_a));
+
+		MLP::Input ret = Map<MLP::Input>(data.data(), data_num);
 
 		return ret;
 	};
@@ -112,8 +127,10 @@ int main()
 	auto &layer_info = params.first;
 	auto &loss = params.second;
 
-	layer_info.push_back(make_pair(2, move(make_unique<ReLu>())));
-	layer_info.push_back(make_pair(3, move(make_unique<ReLu>())));
+	layer_info.push_back(make_pair(data_num, move(make_unique<ReLu>())));
+	layer_info.push_back(make_pair(5, move(make_unique<ReLu>())));
+	layer_info.push_back(make_pair(10, move(make_unique<ReLu>())));
+	layer_info.push_back(make_pair(3, move(make_unique<Identify>())));
 	layer_info.push_back(make_pair(1, move(make_unique<ReLu>())));
 
 	loss = make_unique<MSE>();

@@ -16,7 +16,7 @@
 #include<Randomer.h>
 #include<DataBase.h>
 #include<queue>
-#include"../../MachineLearning/NewralNetWork/NewralNetWork/NewralNetWork.h"
+#include<tiny_dnn/tiny_dnn.h>
 using namespace std;
 
 

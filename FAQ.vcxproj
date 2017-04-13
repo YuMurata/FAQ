@@ -22,7 +22,7 @@
     <ProjectGuid>{C12E2EA1-F594-4368-A515-BF69B1D5F394}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>FAQ</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -61,24 +61,28 @@
     <Import Project="..\..\..\..\GitProp\GitProp.props" />
     <Import Project="..\..\..\..\PropertySeet\Template.props" />
     <Import Project="..\..\..\..\PropertySeet\Eigen.props" />
+    <Import Project="..\..\..\..\PropertySeet\tiny-dnn.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\..\..\PropertySeet\Template.props" />
     <Import Project="..\..\..\..\PropertySeet\Eigen.props" />
     <Import Project="..\..\..\..\GitProp\GitProp.props" />
+    <Import Project="..\..\..\..\PropertySeet\tiny-dnn.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\..\..\PropertySeet\Template.props" />
     <Import Project="..\..\..\..\PropertySeet\Eigen.props" />
     <Import Project="..\..\..\..\GitProp\GitProp.props" />
+    <Import Project="..\..\..\..\PropertySeet\tiny-dnn.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\..\..\PropertySeet\Template.props" />
     <Import Project="..\..\..\..\PropertySeet\Eigen.props" />
     <Import Project="..\..\..\..\GitProp\GitProp.props" />
+    <Import Project="..\..\..\..\PropertySeet\tiny-dnn.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -105,7 +109,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>Randomer.lib;NewralNetWork.lib;StringPlus.lib;Filer.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\Documents\GitHub\MachineLearning\ReinforcementLearning\QLearning\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\init\Documents\Visual Studio 2017\Projects\sandbox\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
